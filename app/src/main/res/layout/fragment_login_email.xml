@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.LoginEmailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:gravity="center"
+            android:text="DiaryAPP2"
+            android:textColor="@color/blue"
+            android:textSize="35sp" />
+
+        <EditText
+            android:id="@+id/emailEdit"
+            style="@style/editStyle"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/passwordEdit"
+            style="@style/editStyle"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="numberPassword"
+            tools:ignore="TextFields" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/dark_blue"
+            />
+
+        <Button
+            android:id="@+id/loginBtn"
+            style="@style/buttonStyle"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/singup_btn"
+            style="@style/buttonStyle"
+            android:text="Sing Up" />
+
+        <TextView
+            android:id="@+id/resetPaswordText"
+            style="@style/textStyle"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:text="Forgot your password?" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

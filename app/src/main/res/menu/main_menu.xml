@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/insertMenu"
+        android:title="Add Diary"
+        />
+
+    <item
+        android:id="@+id/refreshMenu"
+        android:title="Resfresh"
+        />
+
+    <item
+        android:id="@+id/singOutMenu"
+        android:title="SingOut"
+        />
+</menu>

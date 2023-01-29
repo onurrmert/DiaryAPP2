@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.MenuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/textStyle"
+            android:layout_gravity="center"
+            android:textColor="@color/blue"
+            android:layout_margin="10dp"
+            android:textSize="24sp"
+            android:text="DiaryAPP2" />
+
+        <TextView
+            android:id="@+id/deleteText"
+            style="@style/textStyle"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/text_bacground"
+            android:textColor="@color/red"
+            android:padding="5dp"
+            android:text="Delete" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

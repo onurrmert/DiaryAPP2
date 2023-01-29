@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation1"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.onurmert.diaryapp2.View.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginEmailFragment"
+            app:destination="@id/loginEmailFragment"
+            app:enterAnim="@anim/rigthtoleft1"
+            app:exitAnim="@anim/rigthtoleft2"
+            app:popEnterAnim="@anim/lefttorigth1"
+            app:popExitAnim="@anim/lefttorigth2"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginEmailFragment"
+        android:name="com.onurmert.diaryapp2.View.LoginEmailFragment"
+        android:label="fragment_login_email"
+        tools:layout="@layout/fragment_login_email" >
+        <action
+            android:id="@+id/action_loginEmailFragment_to_currentFragment"
+            app:destination="@id/currentFragment"
+            app:popUpTo="@id/loginEmailFragment"
+            app:enterAnim="@anim/rigthtoleft1"
+            app:exitAnim="@anim/rigthtoleft2"
+            app:popEnterAnim="@anim/lefttorigth1"
+            app:popExitAnim="@anim/lefttorigth2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginEmailFragment_to_singupFragment"
+            app:destination="@id/singupFragment"
+            app:enterAnim="@anim/rigthtoleft1"
+            app:exitAnim="@anim/rigthtoleft2"
+            app:popEnterAnim="@anim/lefttorigth1"
+            app:popExitAnim="@anim/lefttorigth2"/>
+        <action
+            android:id="@+id/action_loginEmailFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment"
+            app:enterAnim="@anim/rigthtoleft1"
+            app:exitAnim="@anim/rigthtoleft2"
+            app:popEnterAnim="@anim/lefttorigth1"
+            app:popExitAnim="@anim/lefttorigth2"/>
+    </fragment>
+    <fragment
+        android:id="@+id/currentFragment"
+        android:name="com.onurmert.diaryapp2.View.CurrentFragment"
+        android:label="fragment_current"
+        tools:layout="@layout/fragment_current" >
+        <action
+            android:id="@+id/action_currentFragment_to_diaryDetailFragment"
+            app:destination="@id/diaryDetailFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_currentFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_currentFragment_to_loginEmailFragment"
+            app:destination="@id/loginEmailFragment"
+            app:enterAnim="@anim/rigthtoleft1"
+            app:exitAnim="@anim/rigthtoleft2"
+            app:popEnterAnim="@anim/lefttorigth1"
+            app:popExitAnim="@anim/lefttorigth2"
+            app:popUpTo="@id/currentFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_currentFragment_to_insertFragment2"
+            app:destination="@id/insertFragment2"
+            app:enterAnim="@anim/rigthtoleft1"
+            app:exitAnim="@anim/rigthtoleft2"
+            app:popEnterAnim="@anim/lefttorigth1"
+            app:popExitAnim="@anim/lefttorigth2"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/diaryDetailFragment"
+        android:name="com.onurmert.diaryapp2.View.DiaryDetailFragment"
+        android:label="fragment_diary_detail"
+        tools:layout="@layout/fragment_diary_detail" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_diaryDetailFragment_to_updateFragment"
+            app:destination="@id/updateFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/singupFragment"
+        android:name="com.onurmert.diaryapp2.View.SingupFragment"
+        android:label="fragment_singup"
+        tools:layout="@layout/fragment_singup" >
+        <action
+            android:id="@+id/action_singupFragment_to_currentFragment"
+            app:destination="@id/currentFragment"
+            app:popUpTo="@id/singupFragment"
+            app:enterAnim="@anim/rigthtoleft1"
+            app:exitAnim="@anim/rigthtoleft2"
+            app:popEnterAnim="@anim/lefttorigth1"
+            app:popExitAnim="@anim/lefttorigth2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/menuFragment"
+        android:name="com.onurmert.diaryapp2.View.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.onurmert.diaryapp2.View.UpdateFragment"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_updateFragment_to_currentFragment"
+            app:destination="@id/currentFragment"
+            app:popUpTo="@id/updateFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.onurmert.diaryapp2.View.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginEmailFragment"
+            app:destination="@id/loginEmailFragment"
+            app:popUpTo="@id/forgotPasswordFragment"
+            app:enterAnim="@anim/rigthtoleft1"
+            app:exitAnim="@anim/rigthtoleft2"
+            app:popEnterAnim="@anim/lefttorigth1"
+            app:popExitAnim="@anim/lefttorigth2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/insertFragment2"
+        android:name="com.onurmert.diaryapp2.View.InsertFragment"
+        android:label="fragment_insert"
+        tools:layout="@layout/fragment_insert" >
+        <action
+            android:id="@+id/action_insertFragment2_to_currentFragment"
+            app:destination="@id/currentFragment"
+            app:enterAnim="@anim/rigthtoleft1"
+            app:exitAnim="@anim/rigthtoleft2"
+            app:popEnterAnim="@anim/lefttorigth1"
+            app:popExitAnim="@anim/lefttorigth2"
+            app:popUpTo="@id/insertFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
