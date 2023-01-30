@@ -52,6 +52,7 @@ class LoginEmailVM : ViewModel() {
                 }
             }.addOnFailureListener(activity){
                     error->
+                isLogin.value = true
                 Toast.makeText(activity.applicationContext, "Error occurred while login", Toast.LENGTH_SHORT).show()
                 println("user signIn error2: " + error.localizedMessage)
             }

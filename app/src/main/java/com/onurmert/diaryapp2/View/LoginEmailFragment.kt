@@ -96,17 +96,18 @@ class LoginEmailFragment : Fragment() {
             binding.loginBtn.isClickable = false
             binding.singupBtn.isClickable = false
             binding.progressBar.visibility = View.VISIBLE
+            isLogin1()
         }else{
             Toast.makeText(requireContext(),"Check your internet connection", Toast.LENGTH_SHORT).show()
         }
     }
-
     private fun isLogin1(){
         viewModel.isLogin.observe(viewLifecycleOwner, Observer {
             kotlin.run {
                 if (it == true){
                     binding.loginBtn.isClickable = true
                     binding.singupBtn.isClickable = true
+                    binding.progressBar.visibility = View.INVISIBLE
                 }
             }
         })
