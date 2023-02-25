@@ -8,7 +8,7 @@ With this application you can record your daily experiences or notes. This way, 
 -Firebase<br>
 -Firebase Firestore<br>
 -Firebase Authentication<br>
--MMVM Architecture<br>
+-MVVM Architecture<br>
 -Lifecycle<br><br>
 
 https://user-images.githubusercontent.com/67163842/215787816-a060b332-696c-48f2-af29-34b09fed7ef2.mp4
